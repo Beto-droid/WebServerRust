@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops!</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Sad Background */
+        body {
+            background: linear-gradient(135deg, #2c3e50, #4a687d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #b0c4de;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Cloud Animation */
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            filter: blur(5px);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .cloud:nth-child(1) {
+            width: 200px;
+            height: 60px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .cloud:nth-child(2) {
+            width: 250px;
+            height: 80px;
+            top: 30%;
+            left: 60%;
+            animation-delay: 2s;
+        }
+
+        .cloud:nth-child(3) {
+            width: 150px;
+            height: 50px;
+            top: 50%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #607d8b;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: droop 1s ease forwards;
+        }
+
+        @keyframes droop {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-10deg);
+            }
+        }
+
+        /* Paragraph Styles */
+        p {
+            font-size: 1.5rem;
+            text-align: center;
+            color: #a9a9a9;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-out, slideIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Rain Animation */
+        .rain {
+            position: absolute;
+            width: 2px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            top: 0;
+            left: 50%;
+            animation: rain 0.5s infinite;
+        }
+
+        .rain:nth-child(even) {
+            animation-duration: 0.7s;
+            left: 60%;
+        }
+
+        @keyframes rain {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Sad Clouds -->
+<div class="cloud"></div>
+<div class="cloud"></div>
+<div class="cloud"></div>
+
+<!-- Content -->
+<h1>Oops!</h1>
+<p>Sorry, I don't know what you're asking for.</p>
+
+<!-- Rain Effect -->
+<div class="rain"></div>
+<div class="rain"></div>
+<div class="rain"></div>
+<div class="rain"></div>
+<div class="rain"></div>
+<div class="rain"></div>
+<div class="rain"></div>
+<div class="rain"></div>
+</body>
+</html>
